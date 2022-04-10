@@ -1,0 +1,9 @@
+Verduras
+    Papa
+    Cebolla
+    Lechuga
+    Tomate
+Carne
+    Pata y muslo 
+    milanesa 
+    carne picada    

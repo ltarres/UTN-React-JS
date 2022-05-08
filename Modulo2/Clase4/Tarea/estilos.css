@@ -1,0 +1,136 @@
+/* Estilos para el portfolio */
+
+body {
+	background: silver;
+	font-family: arial;
+	font-size: 14px;
+	overflow-y: scroll;
+}
+
+section {
+	width: 870px;
+	background: #fff;
+	margin: 30px auto;
+	text-align: center;
+}
+section:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+h1 {
+	padding: 20px;
+	background: #ddd;
+}
+
+article {
+	outline: 1px dotted red;
+	width: 250px;
+	float: left;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+figure {
+	margin: 0;
+}
+figure a {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	overflow: hidden;
+	transition: all 0.3s linear;
+}
+
+figure a:before {
+	content: "";
+	display: block;	
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s linear;
+}
+figure a:hover:before {
+	background: rgba(0,128,255,0.5);
+}
+
+figure img {
+	display: block;
+	z-index: 3;
+	position: relative;
+	transition: all 0.3s linear;
+}
+
+figure a:hover img {
+	transform: rotate(15deg) scale(1.35);
+}
+
+figure a:after {
+	content: "\f00e";
+	font-family: "FontAwesome";
+	position: absolute;
+	z-index: 7;
+	top: -80px;
+	left: 50%;
+	margin-left: -30px;
+	font-size: 60px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	transition: all 0.3s linear;
+	color: #fff;
+	text-shadow: 1px 1px 1px #222;
+}
+
+figure a:hover:after {
+	top: 30%;
+}
+
+article:nth-of-type(3n+1)  {
+	clear: both;
+	background: yellow;
+}
+
+.mix {
+	display: none;
+}
+.controles {
+	margin-bottom: 30px;
+}
+
+.btn {
+	display: inline-block;
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+.btn:hover,
+.btn.active {
+	background: #999;
+	color: #fff;
+}
+
+
+@media screen and (max-width: 700px) {
+	section {
+		width: 590px;
+	}
+	article:nth-of-type(3n+1) {
+		clear: none;
+		background: green;
+	}
+	article:nth-of-type(2n+1)  {
+		clear: both;
+		background: yellow;
+	}
+}
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var xvalor;
+        var array = [];
+        var mayor = 0;
+        var x=0;
+    	var cuantos=4;
+
+        while (x<=cuantos){
+            xvalor=prompt('Ingrese el valor al Array '+ x +' de ' + cuantos + ':','');
+                if(isNaN(xvalor)){
+                document.write(xvalor + " No es un Numero <br/>");
+                process.exit
+                }
+                document.write("valores Ingresados: " + xvalor + "<br/>" );
+	        array[x]=parseInt(xvalor);
+	        x=x+1;
+	    }
+
+        for(i=0;i<array.length;i++)
+        if(array[i]>mayor){mayor=array[i]}
+
+        //muesto resultado
+        document.write('el mayor es  ' + mayor);
+
+    </script>
+</body>
+
+</html>

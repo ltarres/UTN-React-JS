@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var xvalor;
+        var movilidad
+
+        xvalor = prompt('Ingrese su metros a ir:', ''); // valor que ingresa el usuario para determinar el medio de transporte. 
+
+        if(isNaN(xvalor)){
+	        document.write(xvalor + " No es un Numero <br/>");
+            process.exit
+        }
+
+
+        if (Number(xvalor) >= 100000) {
+            movilidad = "Avion";
+        }
+        else if (Number(xvalor) < 100000 && Number(xvalor) >= 30000) {
+            movilidad = "Auto";
+        }
+        else if (Number(xvalor) < 30000 && Number(xvalor) >= 10000) {
+            movilidad = "Colectivo";
+        }
+        else if (Number(xvalor) < 10000 && Number(xvalor) >= 1000) {
+            movilidad = "Bicicleta";
+        }
+        else if (Number(xvalor) > 0 && Number(xvalor) < 1000){
+            movilidad = "Caminando";
+        }
+
+        //muesto resultado
+        document.write('Ustede puede ir ' + movilidad);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="ejercicio1.css">
+</head>
+<body>
+    <h3>Ejercicio 1</h3>
+    <p>
+        <button id="red" class="boton alternar">Cambia mi estilo 1</button>
+    </p>
+    <p>
+        <button id ="blue" class="boton alternar">Cambia mi estilo 2</button>
+    </p>
+    <p>
+        <button id="pink" class="boton alternar">Cambia mi estilo 3</button>
+    </p>
+    <script>
+        // CSS
+        var dato0 = document.getElementById('red');
+        var dato1 = document.getElementById('blue');
+        var dato2 = document.getElementById('pink');
+  
+
+        dato0.addEventListener('click', function(e) {
+            e.target.classList.toggle('activo');
+           
+        });
+
+        dato1.addEventListener('click', function(e) {
+            e.target.classList.toggle('activo1');
+        });
+
+        dato2.addEventListener('click', function(e) {
+            e.target.classList.toggle('activo2');
+        });
+   	
+    </script>
+</body>
+</html>
+
+
+

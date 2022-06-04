@@ -27,3 +27,10 @@
     color: white;
 }
       
+.memo-textarea {
+    border: 1px solid black;
+    width: 30rem;
+    padding: .5rem;
+    min-height: 3rem;
+  }
+

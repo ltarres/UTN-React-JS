@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="ejercicio1.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="ejercicio1.css">
 </head>
+
+
 <body>
     <h3>Ejercicio 1</h3>
     <p>
         <button id="red" class="boton alternar">Cambia mi estilo 1</button>
     </p>
     <p>
-        <button id ="blue" class="boton alternar">Cambia mi estilo 2</button>
+        <button id="blue" class="boton alternar">Cambia mi estilo 2</button>
     </p>
     <p>
         <button id="pink" class="boton alternar">Cambia mi estilo 3</button>
     </p>
+    <div></div>
+    <h3>Ejercicio 2</h3>
+
+    <textarea class="memo-textarea" name="textarea" onkeyup="contarcaracter(this);"></textarea>
+    <p id="numero">0 Caracteres</p>
+
+    <h3>Ejercicio 3</h3>
     <script>
         // CSS
         var dato0 = document.getElementById('red');
         var dato1 = document.getElementById('blue');
         var dato2 = document.getElementById('pink');
-  
 
-        dato0.addEventListener('click', function(e) {
+
+        dato0.addEventListener('click', function (e) {
             e.target.classList.toggle('activo');
-           
+
         });
 
-        dato1.addEventListener('click', function(e) {
+        dato1.addEventListener('click', function (e) {
             e.target.classList.toggle('activo1');
         });
 
-        dato2.addEventListener('click', function(e) {
+        dato2.addEventListener('click', function (e) {
             e.target.classList.toggle('activo2');
         });
-   	
+
+        //ejercicio2
+        function contarcaracter(obj) {
+            document.getElementById("numero").innerHTML = obj.value.length + ' Caracteres';
+        }
+
+        //ejercicio3
+        //cargo el array 
+       var alumnos = [
+
+            {
+                nombre: 'Juan Gomez',
+                nota: 7
+            }, {
+                nombre: 'Pedro Rodriguez',
+                nota: 4
+            }, {
+                nombre: 'Roxana García',
+                nota: 8
+            }, {
+                nombre: 'Luciano Lopez',
+                nota: 5
+            }, {
+                nombre: 'Fernanda Gimenez',
+                nota: 6
+            }, {
+                nombre: 'Florencia Martinez',
+                nota: 10
+            }, {
+                nombre: 'Raul Sanchez',
+                nota: 7
+            }, {
+                nombre: 'Sandra Figueroa',
+                nota: 8
+            }
+        ];
+
+        //validacion quien aprobo 
+        for(var alumno in alumnos) {
+              if(alumnos[alumno].nota >= 7) {
+
+                    document.write( alumnos[alumno].nombre +' Aprovado Nota: ' + alumnos[alumno].nota +'</br>' );
+                } else {
+                    document.write( alumnos[alumno].nombre +' <strong>Recupera </strong> Nota :' + alumnos[alumno].nota + '</br>' );
+                }
+            }
+        
+
+
+
     </script>
+
+
 </body>
+
 </html>
-
-
-

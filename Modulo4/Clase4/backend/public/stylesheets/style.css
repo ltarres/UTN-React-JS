@@ -1,0 +1,19 @@
+header {
+  height: 100%;
+  font: 60px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body {
+  height: 50%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #6d98c7;
+  background: linear-gradient(to right, #e64900, #ffb833);
+}
+
+a {
+  color: #b0bfc5;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+

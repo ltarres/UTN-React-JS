@@ -10,6 +10,7 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import About from "./pages/About";
 import Register from "./components/layout/Register";
 import PaymentForms from "../src/js/PaymentForms";
 import PaymentForm from "../src/js/PaymentForm";
@@ -33,6 +34,8 @@ function App() {
       <Route path='/register' element={<Register/>} />
       <Route path='/contact' element={<ContactUs/>} />
       <Route path='/Checkout' element={<Checkout/>} />
+      <Route path='/about' element={<About/>} />
+      
       </Routes> 
       <Footer/> 
     </>

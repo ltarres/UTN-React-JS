@@ -19,7 +19,8 @@ const Cart = () => {
       <div className="px-4 my-5 bg-light rounded-3 py-5">
         <div className="container py-4">
           <div className="row">
-            <h3>Su carrito esta vacio :'c </h3>
+            <h3> El carrito esta vacio</h3>
+            
           </div>
         </div>
       </div>
@@ -70,7 +71,7 @@ const Cart = () => {
         <div className="container">
           <div className="row">
             <NavLink to="/Checkout" className="btn btn-outline-dark mb-5 w-25 mx-auto">
-                Proceso de pago.
+                Procesar Pago.
             </NavLink>
           </div>
         </div>

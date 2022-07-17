@@ -15,9 +15,6 @@ import PaymentForms from "../src/js/PaymentForms";
 import PaymentForm from "../src/js/PaymentForm";
 import Checkout from "./pages/Checkout";
 import './styles/style.css';
-
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import ContactUs from "./components/layout/ContactForm";
 

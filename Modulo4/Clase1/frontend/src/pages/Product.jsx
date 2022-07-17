@@ -65,10 +65,10 @@ const Product = () => {
                     </h3>
                     <p className="lead">{product.description}</p>
                     <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}>
-                        Agregar al Carro.
+                        Agregar al Carrito.
                     </button>
                     <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2">
-                        Ir al Carro.
+                        Ir al Carrito.
                     </NavLink> 
                 </div>
             </>

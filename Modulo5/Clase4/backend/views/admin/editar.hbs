@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Editar producto</h4>
+            <form class="formulario" action="/admin/productos/editar" method="post" enctype="multipart/form-data" >
+            <input type="hidden" value="{{producto.id}}" name="id">
+            <div class="mb-3 row">
+                   <textarea type="text" class="form-control" placeholder="titulo" name="titulo">{{producto.titulo}}</textarea>
+              </div> 
+              <div class="mb-3 row">
+                   <textarea type="text" class="form-control" placeholder="subtitulo" name="subtitulo">{{producto.subtitulo}}</textarea>
+              </div> 
+              <div class="mb-3 row">
+                   <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo">{{producto.cuerpo}}</textarea>
+              </div> 
+              <div class="mb-3 row">
+                 <input type="file" class="form-control" placeholder="Imagen" name="imagen" value="{{producto.imagen}}">
+              </div>
+              <button type="submit" class="btn btn-primary">Editar</button>
+            </form>
+            {{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
+    

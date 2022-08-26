@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var productosModel = require('../../models/productosModel');
 const util = require('util');
-const cloudinary = require('cloudinary') .v2;
+const cloudinary = require('cloudinary').v2;
 const uploader = util.promisify(cloudinary.uploader.upload);
 
 

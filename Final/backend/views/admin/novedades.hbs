@@ -1,0 +1,87 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Novedades</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Novedades</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Alta, Modificacion y Eliminacion de registros</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <a class="btn btn-success" href="/admin/novedades/agregar"><i class="fa fa-plus" aria-hidden="true"></i>Nuevo</a>
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                  <th scope='col'>#</th>  
+                        <th scope='col'>Imagen</th>
+                        <th scope='col'>Titulo</th>
+                        <th scope='col'>Fecha</th>
+                        <th scope='col'>Cuerpo</th>
+                        <th scope='col' class="text-end">Acciones</th> 
+                  </tr>
+                  </thead>
+                 <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{{imagen}}}</td>
+                        <td>{{titulo}}</td>
+                        <td>{{{fecha}}}</td>
+                        <td>{{{cuerpo}}}</td>
+                        <td class="text-end"> 
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn btn-warning">
+                            <i class="fa fa-pencil"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-danger" >
+                            {{!-- data-toggle="modal" data-target="#my-modal" --}}
+                            <i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+                  <tfoot>
+                  <tr>
+                    <th scope='col'>#</th>  
+                        <th scope='col'>Imagen</th>
+                        <th scope='col'>Titulo</th>
+                        <th scope='col'>Fecha</th>
+                        <th scope='col'>Cuerpo</th> 
+                        <th scope='col' class="text-end">Acciones</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  
+</div>
